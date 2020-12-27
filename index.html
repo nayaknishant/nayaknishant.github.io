@@ -69,8 +69,15 @@ img {vertical-align: middle;}
 }
 
 /* On hover, add a grey background color */
-@media (hover: hover) {
-.prev:hover, .next:hover {
+@media (hover: hover) and (pointer: fine) {
+.prev:hover {
+  background-color: #f1f1f1;
+  color: black;
+}
+}
+
+@media (hover: hover) and (pointer: fine) {
+.next:hover {
   background-color: #f1f1f1;
   color: black;
 }

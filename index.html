@@ -1,7 +1,302 @@
 <!DOCTYPE html>
 <html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Inter">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+
+
+.mySlides1, .mySlides2 {display: none}
+img {vertical-align: middle;}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.4;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0px;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a grey background color */
+.prev:hover, .next:hover {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+
+/* Add a gray background color with some padding */
+body {
+  font-family: 'Inter';
+  padding: 20px;
+  background: #ffffff;
+}
+
+.copyleft {
+  display: inline-block;
+  transform: rotate(180deg);
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 20px;
+  font-size: 40px;
+  text-align: center;
+  background: white;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn { 
+  margin: auto;
+  width: 600px;
+
+}
+
+/* Right column */
+.rightcolumn {
+  margin-left: 850px;
+  width: 50px;
+
+
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 12px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+   background-color: white;
+   padding: 25px;
+   margin-top: 50px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ffffff;
+  margin-top: 20px;
+}
+
+</style>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm uh hosted with GitHub Pages.</p>
+
+<div class="header">
+  <h2>before I forget</h2>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>Songs that inspired me to do music</h2>
+      <h5>Dec 26, 2020</h5>
+      <div class="slideshow-container">
+  <div class="mySlides1">
+    <div class="numbertext">1 / 6</div>
+    <img src="images/power.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides1">
+    <div class="numbertext">2 / 6</div>
+    <img src="images/birdland.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides1">
+    <div class="numbertext">3 / 6</div>
+    <img src="images/od.jpg" style="width:100%">
+  </div>
+
+    <div class="mySlides1">
+      <div class="numbertext">4 / 6</div>
+    <img src="images/ntws.jpg" style="width:100%">
+  </div>
+
+      <div class="mySlides1">
+        <div class="numbertext">5 / 6</div>
+    <img src="images/wtt.jpg" style="width:100%">
+  </div>
+
+      <div class="mySlides1">
+        <div class="numbertext">6 / 6</div>
+    <img src="images/motm.jpg" style="width:100%">
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="images/power.jpg" style="width:70%; margin-left: 10px; margin-top: 20px" onclick="currentSlide(1, 0); currentSlide(1, 1);" alt=
+      "The Wooods">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/birdland.jpg" style="width:70%; margin-left: 10px; margin-top: 20px" onclick="currentSlide(2, 0); currentSlide(2, 1);">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/od.jpg" style="width:70%; margin-left: 10px; margin-top: 20px" onclick="
+      currentSlide(3, 0); currentSlide(3, 1);">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/ntws.jpg" style="width:70%; margin-left: 10px; margin-top: 20px" onclick="
+      currentSlide(4, 0); currentSlide(4, 1);">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/wtt.jpg" style="width:70%; margin-left: 10px; margin-top: 20px" onclick="
+      currentSlide(5, 0); currentSlide(5, 1);">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="images/motm.jpg" style="width:70%; margin-left: 10px; margin-top: 20px" onclick="
+      currentSlide(6, 0); currentSlide(6, 1);">
+    </div> 
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1, 0); plusSlides(-1, 1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1, 0); plusSlides(1, 1) ">&#10095;</a>
+</div>
+
+<div class="slideshow-container">
+  <div class="mySlides2">
+  <h3>Kanye West - POWER</h3>
+    <p> Where it all started. When I was in elementary school, I used to press the power button on our Windows XP PC and wait 5 minutes for the computer to boot up. I would run downstairs, ask my dad to enter the password, and wait another 5 minutes for all the random pop-ups to show up. The pop-ups used to annoy me so much and I would instantly close most of them, except for iTunes. I would see all these unique album covers and feel the energy new artists were bringing. Most of the time the iTunes banners didn't catch my attention. But one day, iTunes popped up, and the cover you see above was the first banner I saw. It wasn't trying to be friendly or seduce me, it was Kanye West's bloody head with a sword through it. I was intrigued and shoutout to the fans, it was #1 on the charts. It was enough to make me press play on the 60 second snippet... rest is history.</p>
+  </div>
+
+  <div class="mySlides2">
+      <h3>Weather Report - Birdland</h3>
+    <p>Honestly, I thought the name of this song was "Birdman", a nickname we used to call one of my friends in middle school. This song is amazing, but for me, the meaning of the song comes from the people I associate it with. I used to play percussion in middle school with the most amazing, intelligent music teacher, Mr. Conway. He would always put so much time and effort into making us the best musicians and people we could be. I played the drumset in our middle school jazz ensemble and we picked this song to play for one of our competitions. Sheesh. The drum pattern is fun and intense, but also repititive and strenous. It's played in 4/4 time at like 150-160 BPM and you're hitting a rim click and opening/closing the hi-hat on every 1 and 3. You're also tapping the hi-hat every beat and playing a kick pattern. The song is pretty long and playing it basically drilled rhythm into my head. It was fun though. Miss jamming out.</p>
+  </div>
+
+  <div class="mySlides2">
+      <h3>Kendrick Lamar - Ignorance is Bliss</h3>
+    <p> There's a song called "The Heart Part 3" by Kendrick. Give that a listen if you get the chance. To be honest, I've never heard another artist put as much energy and life into their work. Like ok you want it bad, but do you really? The way Kendrick raps it's as if there is no alternative. There is no backup. This is it, it's do or die. I heard this song when I was in my early teens. People always talked about the "golden-era" rappers like 2Pac and Biggie, but they didn't really connect with me. Eminem kinda did, but when I heard this song I found what I was looking for. Wordplay, lyricism, flow, and a real message dispersed in a futuristic smooth but hard instrumental. "Willie B I'm a fool on your beats, I bleed out the speaker as the speaker that spoke when they didn't speak." I've probably listened to this song every year for the past 10 years to remind myself to keep going harder.</p>
+  </div>
+
+    <div class="mySlides2">
+  <h3>Drake - Pound Cake / Paris Morton Music 2</h3>
+    <p> I was just getting into music and after hearing All Me and The Motion, I was so excited for what Drake was going to do on this album. As we got off the plane from a family vacation in Hawaii, I kept refreshing my iPhone 4 (or iTouch) to see what Drake had announced. He had just released the album cover, which was him and his younger self looking at one another on a backdrop of clouds in a light blue sky. I was soooo hyped. It's crazy to say but I'm still getting into to this album in 2020. There are so many moments, like Chilly Gonzales and Jhene on "From Time", the 3 beat switches crafted by 40 on "Tuscan Leather", and Drake's openness on songs like "Furthest Thing". But the last song on the album, this 7-minute closer, I don't even know what to say. Ambitious, atmospheric, and just bars on bars on bars. "You never know it could happen to you, and I just spent four Ferraris all on a brand new Buggati, and did that shit cause it's something to do." This song, and the album as a whole, put Drake among my top 3 artists of all time and made me even more interested in the art of music and storytelling.</p>
+  </div>
+
+    <div class="mySlides2">
+  <h3>Kanye West & JAY-Z - Gotta Have It</h3>
+    <p> I used to do taekwondo, and we had to pick a song to do our weapon open forms to. I was going through song choices, but I kept coming back to this song off Watch the Throne. It made me feel like the GOAT. But when I actually did my open form, I didn't do as well as I could have. I should've practiced more and been more zoned in, but it was cool hearing the song on huge speakers. I didn't place or anything, but looking back on it now, I see why I liked the song so much. Kanye and Jay going back forth over Neptunes prodution make it a song that I'll always appreciate. All my favorites! Watch the Throne is next level and goes to show what people are capable of when working together, and combining their talents to make something bigger and better than what they would've been capable of doing themselves. </p>
+  </div>
+
+    <div class="mySlides2">
+  <h3>Kid Cudi - Soundtrack 2 My Life</h3>
+    <p>One of the realest, most honest songs I've ever heard. Honestly, Kid Cudi was probably the first artist I ever got into. I always had skinny legs and I never liked baggy pants, which were in back then. I thought they looked weird on me. Kid Cudi was the first "rapper" to wear a hoodie, glasses, and 501 jeans on the world stage. More importantly though, he was just true to himself. He made music that didn't fit a single genre, wore what he wanted to wear, and said whatever was on his mind. I also felt like I could relate to him, and I thought if he could wear skinnier jeans maybe I could too (haha). Songs like "Soundtrack 2 My Life", "Up Up and Away", and the classic "Pursuit of Happiness" were some of the first songs that I chose to listen to outside of whatever my parents were playing on the radio. Glad to have Cudi as one of the first people to inspire me, Pete Davidson, Jaden Smith, Travis Scott, and so many others. </p>
+  </div>
+
+</div>
+
+    </div>
+    <div class="card">
+      <h2>Welcome :)</h2>
+      <h5>December 25, 2020</h5>
+      <p>Unfiltered thoughts, ideas, and things I find interesting. There's so much information on      the internet and I just want a place to store stuff (for now). I'll look back on       this from time to time and maybe others will too. Christmas in 2020 doesn't feel the        same, but grateful for my family, my friends, and my opportunities.</p
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <p><small><span class="copyleft">&copy;</span> Nishant Nayak. All Wrongs Reserved</small></p>
+</div>
+
+<script>
+var slideIndex = [1,1];
+var slideId = ["mySlides1", "mySlides2"]
+showSlides(1, 0);
+showSlides(1, 1);
+
+function plusSlides(n, no) {
+  showSlides(slideIndex[no] += n, no);
+}
+
+function currentSlide(n, no) {
+  showSlides(slideIndex[no] = n, no);
+}
+
+function showSlides(n, no) {
+  var i;
+  var x = document.getElementsByClassName(slideId[no]);
+  if (n > x.length) {slideIndex[no] = 1}    
+  if (n < 1) {slideIndex[no] = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex[no]-1].style.display = "block";  
+}
+</script>
+
 </body>
 </html>

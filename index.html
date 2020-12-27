@@ -102,8 +102,15 @@ body {
 /* Left column */
 .leftcolumn { 
   margin: auto;
-  width: 600px;
+  max-width: 50%;
+  min-width: 330px
 
+}
+
+@media only screen and (max-width: 930px) {
+  .leftcolumn {
+    max-width: 70%;
+  }
 }
 
 /* Right column */
@@ -162,7 +169,7 @@ body {
 
 <div class="row">
   <div class="leftcolumn">
-    <div class="card">
+    <div class="card" style="width: 100%">
       <h2>Songs that inspired me to do music</h2>
       <h5>Dec 26, 2020</h5>
       <div class="slideshow-container">

@@ -23,6 +23,12 @@ img {vertical-align: middle;}
   width: 16.66%;
 }
 
+.column2 {
+  float: left;
+  width: 25%;
+}
+
+
 /* Add a transparency effect for thumnbail images */
 .demo {
   opacity: 0.4;
@@ -101,7 +107,7 @@ body {
 /* Left column */
 .leftcolumn { 
   margin: auto;
-  max-width: 50%;
+  max-width: 700px;
   min-width: 330px
 
 }
@@ -164,6 +170,48 @@ body {
 
 <div class="row">
   <div class="leftcolumn">
+
+    <div class="card" style="width: 100%">
+      <h2>A very cold winter</h2>
+      <h5>Dec 30, 2020</h5>
+      <div class="slideshow-container 1">
+        <div class="mySlides3">
+          <div class="numbertext">1 / 4</div>
+          <img src="images/winter1.jpg" style="width:100%">
+        </div>
+        <div class="mySlides3">
+          <div class="numbertext">2 / 4</div>
+          <img src="images/winter2.jpg" style="width:100%">
+        </div>
+        <div class="mySlides3">
+          <div class="numbertext">3 / 4</div>
+          <img src="images/winter3.jpg" style="width:100%">
+        </div>
+        <div class="mySlides3">
+          <div class="numbertext">4 / 4</div>
+          <img src="images/winter4.jpg" style="width:100%">
+        </div>
+        <div class="row">
+          <div class="column2">
+            <img class="demo cursor" src="images/winter1.jpg" style="width:60%; margin-left: 30px; margin-top: 20px" onclick="currentSlide(1, 2);">
+          </div>
+          <div class="column2">
+            <img class="demo cursor" src="images/winter2.jpg" style="width:60%; margin-left: 30px; margin-top: 20px" onclick="currentSlide(2, 2);">
+          </div>
+          <div class="column2">
+            <img class="demo cursor" src="images/winter3.jpg" style="width:60%; margin-left: 30px; margin-top: 20px" onclick="
+            currentSlide(3, 2);">
+          </div>
+          <div class="column2">
+            <img class="demo cursor" src="images/winter4.jpg" style="width:60%; margin-left: 30px; margin-top: 20px" onclick="
+            currentSlide(4, 2);">
+          </div>
+        </div>
+        <a class="prev" onclick="plusSlides(-1, 2);">&#10094;</a>
+        <a class="next" onclick="plusSlides(1, 2);">&#10095;</a>
+      </div>
+      <p>One of the coldest winters and I'm not talking temperature. Hope people are doing ok, and that 2021 will be better than 2020. Photos by Tyler Wilson from flickr. </p>
+    </div>
 
     <div class="card" style="width: 100%">
       <h2>Songs that inspired me to do music</h2>
@@ -274,10 +322,11 @@ body {
 </div>
 
 <script>
-var slideIndex = [1,1];
-var slideId = ["mySlides1", "mySlides2"]
+var slideIndex = [1,1,1,1];
+var slideId = ["mySlides1", "mySlides2", "mySlides3"]
 showSlides(1, 0);
 showSlides(1, 1);
+showSlides(1, 2);
 
 function plusSlides(n, no) {
   showSlides(slideIndex[no] += n, no);
